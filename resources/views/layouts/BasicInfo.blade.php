@@ -3,7 +3,7 @@
                 bg-white rounded-lg rounded-t-none shadow-2xl 
                 p-8 md:p-12 
                 mx-auto -mt-[1px]"> 
-        <h2 class="font-palatino new roman sm:text-xl md:text-2xl lg:text-3xl font-bold text-[#850038] mb-6 text-center">
+        <h2 class="font-palatino text-[28px] font-bold text-[#850038] mb-6 text-center">
                 Basic Information
         </h2>
             <!-- Form Content -->
@@ -92,13 +92,13 @@
         </div>
         <!-- Birth Date -->
         <div class="relative w-full">
-            <label for="dob" class="font-medium">Birth Date</label>
+            <label for="dob" class="font-medium">Birth Date</label><span class="text-red-500 ml-1">*</span>
             <input required type="date" id="dob" name="dob" class="peer w-full px-4 py-3 text-base bg-white outline-none border-2 border-gray-300 rounded-md focus:border-[#0E6021] focus:ring-1 focus:ring-[#0E6021] transition-colors mt-2"/>
         </div>
 
         <!-- Sex at Birth -->
         <div class="relative w-full">
-            <label for="sexatbirth" class="font-medium">Sex at Birth</label>
+            <label for="sexatbirth" class="font-medium">Sex at Birth</label><span class="text-red-500 ml-1">*</span>
             <select id="sexatbirth" name="sexatbirth" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-md focus:outline-none focus:border-[#0E6021] focus:ring-1 focus:ring-[#0E6021] transition-colors mt-2">
                 <option disabled selected>Please Select</option>
                 <option value="male">Male</option>
@@ -109,7 +109,7 @@
     <!-- Birth Place + Civil Status Row -->
     <div class="md:col-span-1 flex flex-col w-full">
         <label for="birthplace" class="font-medium">
-            Birth Place
+            Birth Place <span class="text-red-500 ml-1">*</span>
         </label>
         <input required id="birthplace" type="text" 
             class="peer w-full px-4 py-3 text-base bg-white outline-none
@@ -121,27 +121,27 @@
 
     <div class="md:col-span-1 flex flex-col w-full">
         <label for="civilstatus" class="font-medium">
-            Civil Status
+            Civil Status<span class="text-red-500 ml-1">*</span>
         </label>
         <select id="civilstatus" name="civilstatus" required
             class="w-full px-4 py-3 border-2 border-gray-300 rounded-md
                 focus:outline-none focus:border-[#0E6021] focus:ring-1 focus:ring-[#0E6021]
                 transition-colors mt-2">
-            <option value="select" disabled selected>Please Select</option>
-            <option value="single">Single (never married)</option>
-            <option value="married">Married</option>
-            <option value="separated">Separated (legally or de facto)</option>
-            <option value="annuled">Annulled / Marriage declared null and void</option>
-            <option value="widowed">Widowed</option>
-            <option value="livin">Living with partner / Cohabiting</option>
-            <option value="noans">Prefer not to answer</option>
+                <option value="select" disabled selected>Please Select</option>
+                <option value="single">Single (never married)</option>
+                <option value="married">Married</option>
+                <option value="separated">Separated (legally or de facto)</option>
+                <option value="annuled">Annulled / Marriage declared null and void</option>
+                <option value="widowed">Widowed</option>
+                <option value="livin">Living with partner / Cohabiting</option>
+                <option value="noans">Prefer not to answer</option>
         </select>
     </div>
         <div id="marriagesection" class="col-span-1 md:col-span-2 hidden">
 
         <!-- Marriage Date -->
         <div class="mb-6">
-            <label for="marriagedate" class="text-base sm:text-lg md:text-xl font-regular text-[#850038]">
+            <label for="marriagedate" class="text-base sm:text-lg md:text-xl font-regular text-black-700">
                 Marriage Date
             </label>
             <input required type="date" id="marriagedate" name="marriagedate" class="peer w-full px-4 py-3 text-base bg-white outline-none border-2 border-gray-300 rounded-md focus:border-[#0E6021] focus:ring-1 focus:ring-[#0E6021] transition-colors"/>
@@ -149,8 +149,8 @@
 
         <!-- Article 370 Info + Preferred Name -->
         <div class="col-span-1 md:col-span-2 text-justify">
-        <p>
-            Under <span class="font-semibold"> Article 370</span> of the Civil Code of the Philippines, 
+        <p class="text-gray-700">
+            Under <span class="font-semibold text-[#850038]"> Article 370</span> of the Civil Code of the Philippines, 
             a married woman may choose how her name will appear after marriage. 
             While marriage does not legally require a change in name, the law allows a woman to:
         </p>
@@ -158,50 +158,72 @@
         <ol class="list-decimal pl-6 mt-3 space-y-3 marker:text-[#850038]">
             <li id="fullmaidenname">
                 Retain her full maiden name 
-                <span class="font-semibold">(Sharon Gamboa Cuneta)</span>
+                <span class="text-[#850038] ">(Sharon Gamboa Cuneta)</span>
             </li>
             <li id="hyphenatedsurname">
                 Use a hyphenated surname, combining her maiden surname and her husband’s surname 
-                <span class="font-semibold">(Sharon Gamboa Cuneta-Pangilinan)</span>
+                <span class="text-[#850038]">(Sharon Gamboa Cuneta-Pangilinan)</span>
                 
             </li>
             <li id="husbandsurname"> 
                 Adopt her husband’s surname by placing it after her maiden first name and surname
-                <spann class="font-semibold">(Sharon Cuneta Pangilinan)</span> 
+                <spann class="text-[#850038]">(Sharon Cuneta Pangilinan)</span> 
             </li>
         </ol>
-
-        <p class="mt-3">
+        <p class="mt-3 text-black-700 font-semibold">
             Please select one of the following options to help us record your preferred name format 
             for official and academic purposes.
         </p>
         <p class="mt-6 font-bold">
             Preferred Name <span class="text-red-500 ml-1">*</span>
         </p>
-    <div class="mt-3 space-y-3">
-        <label class="flex items-start gap-2 text-justify">
-            <input type="radio" name="name_format" class="mt-1 accent-[#0E6021]">
-            <span>
-                Full maiden name (First name, Middle name, Surname)
-            </span>
-        </label>
+        <div class="mt-3 space-y-3">
+            <label class="flex items-start gap-2 text-justify">
+                <input type="radio" name="name_format" class="mt-1 accent-[#0E6021]">
+                <span>
+                    Full maiden name (First name, Middle name, Surname)
+                </span>
+            </label>
 
-        <label class="flex items-start gap-2 text-justify">
-            <input type="radio" name="name_format" class="mt-1 accent-[#0E6021]">
-            <span>
-                Hyphenated surname (First name, Middle name, Surname-Husband's Surname)
-            </span>
-        </label>
+            <label class="flex items-start gap-2 text-justify">
+                <input type="radio" name="name_format" class="mt-1 accent-[#0E6021]">
+                <span>
+                    Hyphenated surname (First name, Middle name, Surname-Husband's Surname)
+                </span>
+            </label>
 
-        <label class="flex items-start gap-2 text-justify">
-            <input type="radio" name="name_format" class="mt-1 accent-[#0E6021]">
-            <span>
-                Husband's surname (First name, Surname, Husband's Surname)
-            </span>
-        </label>
-    </div> 
-        
+            <label class="flex items-start gap-2 text-justify">
+                <input type="radio" name="name_format" class="mt-1 accent-[#0E6021]">
+                <span>
+                    Husband's surname (First name, Surname, Husband's Surname)
+                </span>
+            </label>
+        </div> 
     </div>
-        </div>
-            @include('layouts.button')
 </div>
+    @include('layouts.button')
+</div>
+<script>
+    const civilStatus = document.getElementById('civilstatus');
+    const marriageSection = document.getElementById('marriagesection');
+    const marriageDate = document.getElementById('marriagedate');
+
+    function toggleMarriagesection() {
+        const value = civilStatus.value;
+        
+        if (value === 'single' || value === 'noans' || value === 'livin' || value==='select' || value==='annuled' || value==='separated' || value==='widowed') 
+        {
+            marriageSection.classList.add('hidden');
+            marriageDate.removeAttribute('required');
+            marriageDate.value = '';
+        } else {
+            marriageSection.classList.remove('hidden');
+            marriageDate.setAttribute('required', 'required');
+        }
+    }
+
+    civilStatus.addEventListener('change', toggleMarriagesection);
+
+    // Run on page load (important for old values)
+    toggleMarriagesection();
+</script>

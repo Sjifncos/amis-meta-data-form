@@ -3,7 +3,7 @@
                 bg-white rounded-lg rounded-t-none shadow-2xl 
                 p-8 md:p-12 
                 mx-auto -mt-[1px]">     
-        <h2 class="font-palatino new roman sm:text-xl md:text-2xl lg:text-3xl font-bold text-[#850038] mb-6 text-center">
+        <h2 class="font-palatino text-[28px] font-bold text-[#850038] mb-6 text-center">
                 Education and Employment
         </h2>
             <!-- Form Content -->
@@ -39,7 +39,7 @@
                     border-2 border-gray-300 rounded-md
                     focus:border-[#0E6021] focus:ring-1 focus:ring-[#0E6021]
                     transition-colors mt-2"/>
-            <p class="text-[12px] text-black-500 mt-1">Separate multiple entries with a comma.</p>
+            <p class="text-[12px] text-gray-500 mt-1">Separate multiple entries with a comma.</p>
         </div>
         <div class="relative w-full">
             <div class="relative w-full mt-14">
@@ -51,8 +51,8 @@
         </div>
              <!-- Primary Source Income -->
        <div class="relative w-full">
-            <label for="income" class="font-medium">Primary Source of Income <span class="text-red-500 ml-1">*</span></label>
-            <select id="income" name="income" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-md focus:outline-none focus:border-[#0E6021] focus:ring-1 focus:ring-[#0E6021] transition-colors mt-2">
+            <label for="typeofincome" class="font-medium">Primary Source of Income <span class="text-red-500 ml-1">*</span></label>
+            <select id="typeofincome" name="income" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-md focus:outline-none focus:border-[#0E6021] focus:ring-1 focus:ring-[#0E6021] transition-colors mt-2">
                 <option disabled selected>Please Select</option>
                 <option value="employeed">Employed (salary from an employer)</option>
                 <option value="self-employeed">Self-employed / Freelance / Professional practice</option>
@@ -88,13 +88,13 @@
             </select>
         </div>
         </div>
-        <div class="relative w-full">
-            <div class="max-w-md space-y-3">
+    <div class="col-span-1 md:col-span-2">
         <p class="font-medium">
             Primary Source(s) of Funding for Your Graduate Studies<br> (select all that apply)
             <span class="text-red-500">*</span>
         </p>
-
+        </div>
+        <div class="relative w-full space-y-3">
         <label class="flex items-center space-x-2">
             <input type="checkbox" class="h-4 w-4">
             <span>Personal income from employment or self-employment</span>
@@ -119,7 +119,8 @@
             <input type="checkbox" class="h-4 w-4">
             <span>Government scholarship (non-UP)</span>
         </label>
-
+    </div>
+    <div class="relative w-full space-y-3">
         <label class="flex items-center space-x-2">
             <input type="checkbox" class="h-4 w-4">
             <span>Private scholarship or fellowship</span>
@@ -132,7 +133,7 @@
 
         <label class="flex items-center space-x-2">
             <input type="checkbox" class="h-4 w-4">
-            <span>Employer sponsorship/study leave with pay</span>
+            <span>Employer sponsorship / study leave with pay</span>
         </label>
 
         <label class="flex items-center space-x-2">
@@ -144,23 +145,49 @@
             <input type="checkbox" class="h-4 w-4">
             <span>Passive income</span>
         </label>
-
-        <label class="flex items-center space-x-2">
-            <input type="checkbox" class="h-4 w-4">
+    </div>
+    <div class="relative w-full">
+        <label class="flex items-center space-x-2 -mt-4">
+            <input type="checkbox" id="funding-other" class="h-4 w-4">
             <span>Other (Please Specify)</span>
         </label>
     </div>
-    <div class="relative w-full mt-6"> 
-        <div class="relative w-full">
-            <input required id="specifyscholarship" type="text" class="peer w-full px-4 py-3 text-base bg-white outline-none border-2 border-gray-300 rounded-md focus:border-[#0E6021] focus:ring-1 focus:ring-[#0E6021] transition-colors"/>
-                <label for="specifyscholarship" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white px-1 text-sm text-gray-500 pointer-events-none transition-all duration-150 peer-focus:top-0 peer-focus:left-2 peer-focus:text-xs peer-focus:text-[#0E6021] peer-valid:top-0 peer-valid:left-2 peer-valid:text-xs peer-valid:text-[#0E6021]">
-                    Please specify the scholarship.<span class="text-red-500 ml-1">*</span>
-                </label>
-        </div>
+   <div id="funding-other-wrapper" class="col-span-1 md:col-span-2 hidden">
+    <div class="relative w-full">
+        <input id="funding-other-input" type="text"
+            class="peer w-full px-4 py-3 text-base bg-white outline-none border-2
+                   border-gray-300 rounded-md focus:border-[#0E6021]
+                   focus:ring-1 focus:ring-[#0E6021] transition-colors"/>
+        <label for="funding-other-input"
+            class="absolute left-3 top-1/2 -translate-y-1/2 bg-white px-1 text-sm
+                   text-gray-500 pointer-events-none transition-all duration-150
+                   peer-focus:top-0 peer-focus:left-2 peer-focus:text-xs peer-focus:text-[#0E6021]
+                   peer-valid:top-0 peer-valid:left-2 peer-valid:text-xs peer-valid:text-[#0E6021]">
+            Please Specify.<span class="text-red-500 ml-1">*</span>
+        </label>
     </div>
-    </div>
-       
-        @include('layouts.button')
-    </form>
 </div>
-            
+    @include('layouts.button')
+    </form> 
+</div>
+       
+        
+ <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const otherCheckbox = document.getElementById('funding-other');
+    const otherWrapper = document.getElementById('funding-other-wrapper');
+    const otherInput = document.getElementById('funding-other-input');
+
+    otherCheckbox.addEventListener('change', function () {
+        if (this.checked) {
+            otherWrapper.classList.remove('hidden');
+            otherInput.required = true;
+        } else {
+            otherWrapper.classList.add('hidden');
+            otherInput.required = false;
+            otherInput.value = '';
+        }
+    });
+});
+</script>
+

@@ -20,7 +20,7 @@
         <div class="px-6 sm:px-8 py-8 sm:py-12">
 
             {{-- Introduction --}}
-            <div class="space-y-5 mb-8 text-gray-700 text-sm sm:text-base leading-relaxed text-justify">
+            <div class="space-y-5 mb-8 text-black text-sm sm:text-base leading-relaxed text-justify">
                  <p>
                     To ensure the accuracy and completeness of University records, 
                     students are requested to review and update their personal and academic information using this form. 
@@ -53,7 +53,7 @@
                     id="agreement"
                     class="mt-1 w-5 h-5 accent-[#0E6021] rounded cursor-pointer">
 
-                <label for="agreement" class="text-gray-700 text-sm sm:text-base cursor-pointer">
+                <label for="agreement" class="text-black-700 text-sm sm:text-base cursor-pointer">
                     I agree to the
                     <a target="_blank"
                        href="https://our.upcebu.edu.ph/information/privacy-notice-for-students/"

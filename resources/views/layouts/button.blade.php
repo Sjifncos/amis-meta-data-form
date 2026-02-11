@@ -5,7 +5,8 @@
         <button 
             id="backBtn"
             type="button"
-            class="w-full sm:w-auto px-8 py-3 border-2 border-gray-400 text-gray-700 font-semibold rounded hover:bg-gray-50 transition-colors duration-200"
+            class="w-full sm:w-auto px-8 py-3 border-2 border-gray-400 text-black-700 
+                    font-semibold rounded hover:bg-gray-50 transition-colors duration-200"
             onclick="history.back()">
             Back
         </button>
@@ -17,7 +18,8 @@
                 type="submit"
                 name="action"
                 value="save"
-                class="w-full sm:w-auto px-8 py-3 border-2 border-gray-400 text-gray-700 font-semibold rounded hover:bg-gray-50 transition-colors duration-200">
+                class="w-full sm:w-auto px-8 py-3 border-2 border-gray-400 text-black-700 
+                        font-semibold rounded hover:bg-gray-50 transition-colors duration-200">
                 Save
             </button>
             
@@ -26,7 +28,8 @@
                 type="submit"
                 name="action"
                 value="next"
-                class="w-full sm:w-auto px-8 py-3 bg-[#850038] text-white font-semibold rounded hover:bg-[#FFAD0D] transition-colors duration-200">
+                class="w-full sm:w-auto px-8 py-3 bg-[#850038] text-white font-semibold rounded hover:bg-[#FFAD0D]
+                         transition-colors duration-200">
                 Next
             </button>
         </div>

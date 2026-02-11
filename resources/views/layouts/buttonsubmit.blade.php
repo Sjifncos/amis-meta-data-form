@@ -1,4 +1,3 @@
-                {{-- Buttons --}}
 <div class="col-span-1 md:col-span-2">
         <div class="flex flex-col sm:flex-row justify-between gap-4 sm:gap-3 mt-6">
     <!-- Left side -->

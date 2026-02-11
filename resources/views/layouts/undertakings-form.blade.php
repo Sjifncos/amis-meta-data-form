@@ -3,11 +3,12 @@
                 bg-white rounded-lg rounded-t-none shadow-2xl 
                 p-8 md:p-12 
                 mx-auto -mt-[1px]"> 
-        <h2 class="font-palatino new roman sm:text-xl md:text-2xl lg:text-3xl font-bold text-[#850038] mb-6 text-center">
+        <h2 class="font-palatino text-[28px] font-bold text-[#850038] mb-6 text-center">
                 Undertakings
         </h2>
         <div class="px-6 sm:px-8 py-8 sm:py-12">
-            <form action="">
+            <!-- Step 6: Undertakings -->
+            <div class="step-content">
                 @csrf
             <!-- Confirmation Checkbox -->
             <div class="mb-6 flex flex-col gap-2">
@@ -20,7 +21,7 @@
                         type="checkbox" 
                         id="confirmation" 
                         class="mt-1 w-5 h-5 accent-[#0E6021] rounded cursor-pointer flex-shrink-0">
-                    <label for="confirmation" class="text-gray-700 text-sm sm:text-base cursor-pointer leading-relaxed">
+                    <label for="confirmation" class="text-black-800 text-sm sm:text-base cursor-pointer leading-relaxed">
                         I confirm that all the information I provided in this form is true and correct.
                     </label>
                 </div>
@@ -37,7 +38,7 @@
                         type="checkbox" 
                         id="data-privacy" 
                         class="mt-1 w-5 h-5 accent-[#0E6021] rounded cursor-pointer flex-shrink-0">
-                    <label for="data-privacy" class="text-gray-700 text-sm sm:text-base cursor-pointer leading-relaxed text-justify">
+                    <label for="data-privacy" class="text-black-800 text-sm sm:text-base cursor-pointer leading-relaxed text-justify">
                         I have read and understood UP’s Privacy Notice. I understand that UP Cebu needs 
                         to process my personal information to manage my student records.
                     </label>
@@ -83,7 +84,7 @@
                 </div>
         </div>
             @include('layouts.buttonsubmit')
-        </form>
+    </div>
     </div>
 </div>
 <script>

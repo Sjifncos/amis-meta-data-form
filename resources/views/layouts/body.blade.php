@@ -7,13 +7,14 @@
     <link href="https://fonts.cdnfonts.com/css/palatino" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="{{ asset('images/OUR-favicon.png') }}" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     @vite('resources/js/app.js')
     @vite('resources/css/app.css')
     <script src="https://cdn.tailwindcss.com"></script>
     @stack('styles')
 </head>
-
+      <meta name="csrf-token" content="{{ csrf_token() }}">
 <body class="bg-[#F0F0F0] min-h-screen flex flex-col items-center justify-center px-4">
     @yield('content')
 </body>

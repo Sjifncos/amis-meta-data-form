@@ -8,7 +8,7 @@
 
     {{-- Step 1: Access Verification --}}
     <div id="step1">
-        <h2 class="font-palatino sm:text-xl md:text-2xl lg:text-3xl font-bold text-[#850038] mb-6">
+        <h2 class="font-palatino text-[28px] font-bold text-[#850038] mb-6">
             Access Verification
         </h2>
 
@@ -48,7 +48,7 @@
 
     {{-- Step 2: Additional Information --}}
     <div id="step2" class="hidden">
-        <h2 class="font-palatino sm:text-xl md:text-2xl lg:text-3xl font-bold text-[#850038] mb-6">
+        <h2 class="font-palatino text-[28px] font-bold text-[#850038] mb-6 text-center">
             Additional Information
         </h2>
 
@@ -74,6 +74,7 @@
                            peer-focus:top-0 peer-focus:left-3 peer-focus:text-sm peer-focus:text-[#0E6021]
                            peer-valid:top-0 peer-valid:left-3 peer-valid:text-sm peer-valid:text-[#0E6021]">
                     UPM
+                    <span class="text-red-500 ml-1">*</span>
                 </label>
             </div>
 
@@ -95,6 +96,7 @@
                            peer-focus:top-0 peer-focus:left-3 peer-focus:text-sm peer-focus:text-[#0E6021]
                            peer-valid:top-0 peer-valid:left-3 peer-valid:text-sm peer-valid:text-[#0E6021]">
                     Category
+                    <span class="text-red-500 ml-1">*</span>
                 </label>
             </div>
 
@@ -116,8 +118,12 @@
                 peer-focus:top-0 peer-focus:left-3 peer-focus:text-sm peer-focus:text-[#0E6021]
                 peer-valid:top-0 peer-valid:left-3 peer-valid:text-sm peer-valid:text-[#0E6021]">
                 UP E-mail Address
+                <span class="text-red-500 ml-1">*</span>
             </label>
     </div>
+      <div class="relative w-full">
+                <p class="text-[12px] text-gray-500 mt-1">UPid@up.edu.ph</p>
+            </div>
             @section('content')
                  @include('layouts.button')
         </form>
