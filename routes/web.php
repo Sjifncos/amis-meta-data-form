@@ -1,7 +1,7 @@
 <?php
 use App\Http\Controllers\AccessVerificationController;
 use Illuminate\Support\Facades\Route;
-//use Inertia\Inertia;
+use Inertia\Inertia;
 use Laravel\Fortify\Features;
  
 Route::post('/AccessVerification/save', [AccessVerificationController::class, 'save'])->name('AccessVerification.save');
