@@ -12,7 +12,8 @@
         </button>
         
         <!-- Right Side - Save and Next Buttons -->
-        <div class="flex flex-col sm:flex-row gap-4 sm:gap-3 justify-end">
+        <!--
+<div class="flex flex-col sm:flex-row gap-4 sm:gap-3 justify-end">
             <button 
                 id="saveBtn"
                 type="submit"
@@ -22,6 +23,7 @@
                         font-semibold rounded hover:bg-gray-50 transition-colors duration-200">
                 Save
             </button>
+-->
             
             <button
                 id="nextBtn"
